@@ -59,9 +59,9 @@
 
 			<!-- 内容区域 -->
 			<view class="v-data">
-				<swiper class="swiper"  :duration="0" :vertical="true" :disable-touch="true" :current="current">
-					<swiper-item >
-						<title-project>
+				<swiper  class="swiper"  :duration="0" :vertical="true" :disable-touch="true" :current="current">
+					<swiper-item class="swi-item">
+						<title-project >
 							<text slot="num1">{{num1}}</text>
 							<text slot="project1">{{project1}}</text>
 							
@@ -78,7 +78,8 @@
 							<text slot="project5">{{project5}}</text>
 						</title-project>
 					</swiper-item>
-					<swiper-item>
+					
+					<swiper-item class="swi-item" >
 						<view class="swiper-item uni-bg-green">B</view>
 					</swiper-item>
 				</swiper>
@@ -109,6 +110,7 @@
 				project3:'测试项目3',
 				project4:'测试项目4',
 				project5:'测试项目5',
+				
 			}
 		},
 		onLoad() {
