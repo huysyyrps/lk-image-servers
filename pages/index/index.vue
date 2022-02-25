@@ -62,25 +62,62 @@
 				<swiper  class="swiper"  :duration="0" :vertical="true" :disable-touch="true" :current="current">
 					<swiper-item class="swi-item">
 						<title-project >
+							<text slot="tag1">{{image}}</text>
 							<text slot="num1">{{num1}}</text>
 							<text slot="project1">{{project1}}</text>
 							
+							<text slot="tag2">{{image}}</text>
 							<text slot="num2">{{num2}}</text>
 							<text slot="project2">{{project2}}</text>
 							
+							<text slot="tag3">{{image}}</text>
 							<text slot="num3">{{num3}}</text>
 							<text slot="project3">{{project3}}</text>
 							
+							<text slot="tag4">{{image}}</text>
 							<text slot="num4">{{num4}}</text>
 							<text slot="project4">{{project4}}</text>
 							
+							<text slot="tag5">{{image}}</text>
 							<text slot="num5">{{num5}}</text>
 							<text slot="project5">{{project5}}</text>
 						</title-project>
 					</swiper-item>
 					
 					<swiper-item class="swi-item" >
-						<view class="swiper-item uni-bg-green">B</view>
+						<title-project >
+							<text slot="tag1">{{video}}</text>
+							<text slot="num1">{{num1}}</text>
+							<text slot="project1">{{project1}}</text>
+							
+							<text slot="tag2">{{video}}</text>
+							<text slot="num2">{{num2}}</text>
+							<text slot="project2">{{project2}}</text>
+							
+							<text slot="tag3">{{video}}</text>
+							<text slot="num3">{{num3}}</text>
+							<text slot="project3">{{project3}}</text>
+							
+							<text slot="tag4">{{video}}</text>
+							<text slot="num4">{{num4}}</text>
+							<text slot="project4">{{project4}}</text>
+							
+							<text slot="tag5">{{video}}</text>
+							<text slot="num5">{{num5}}</text>
+							<text slot="project5">{{project5}}</text>
+						</title-project>
+					</swiper-item>
+					
+					<swiper-item class="swi-item" >
+						<view>111111111</view>
+					</swiper-item>
+					
+					<swiper-item class="swi-item" >
+						<problem-send></problem-send>
+					</swiper-item>
+					
+					<swiper-item class="swi-item" >
+						<admin></admin>
 					</swiper-item>
 				</swiper>
 			</view>
@@ -100,6 +137,8 @@
 				adminTag: false,
 				
 				current: 0,
+				image:"图片",
+				video:"视频",
 				num1:"1234",
 				num2:"1235",
 				num3:"1236",
@@ -139,6 +178,7 @@
 				this.explainTag = true;
 				this.problemTag = false;
 				this.adminTag = false;
+				this.current = 2;
 			},
 			problemSelect() {
 				this.imgTag = false;
@@ -146,6 +186,7 @@
 				this.explainTag = false;
 				this.problemTag = true;
 				this.adminTag = false;
+				this.current = 3;
 			},
 			adminSelect() {
 				this.imgTag = false;
@@ -153,6 +194,7 @@
 				this.explainTag = false;
 				this.problemTag = false;
 				this.adminTag = true;
+				this.current = 4;
 			},
 		}
 	}
@@ -160,4 +202,19 @@
 
 <style>
 	@import "../../static/index/index.css";
+	.swiper,.swi-item {
+	  -webkit-transform: translate3d(0px, 0, 0);
+	  -moz-transform: translate3d(0px, 0, 0);
+	  -o-transform: translate(0px, 0px);
+	  -ms-transform: translate3d(0px, 0, 0);
+	  transform: translate3d(0px, 0, 0);
+	}
+	
+	 .swiper{
+	  -webkit-transform: translate3d(0px, 0, 0);
+	  -moz-transform: translate3d(0px, 0, 0);
+	  -o-transform: translate(0px, 0px);
+	  -ms-transform: translate3d(0px, 0, 0);
+	  transform: translate3d(0px, 0, 0);
+	}
 </style>

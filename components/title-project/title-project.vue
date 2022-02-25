@@ -3,7 +3,9 @@
 		<view class="v-content">
 			<view class="v-data">
 				<view class="v-num" style="background-color: #1890FF;">
-					<text class="tv">图片:</text>
+					<text class="tv">
+						<slot name="tag1"></slot>
+					</text>
 					<text class="tv-num">
 						<slot name="num1"></slot>
 					</text>
@@ -18,7 +20,9 @@
 
 			<view class="v-data">
 				<view class="v-num" style="background-color: #91CB74;">
-					<text class="tv">图片:</text>
+					<text class="tv">
+						<slot name="tag2"></slot>
+					</text>
 					<text class="tv-num">
 						<slot name="num2"></slot>
 					</text>
@@ -33,7 +37,9 @@
 
 			<view class="v-data">
 				<view class="v-num" style="background-color: #FAC858;">
-					<text class="tv">图片:</text>
+					<text class="tv">
+						<slot name="tag3"></slot>
+					</text>
 					<text class="tv-num">
 						<slot name="num3"></slot>
 					</text>
@@ -48,7 +54,9 @@
 
 			<view class="v-data">
 				<view class="v-num" style="background-color: #EE6666;">
-					<text class="tv">图片:</text>
+					<text class="tv">
+						<slot name="tag4"></slot>
+					</text>
 					<text class="tv-num">
 						<slot name="num4"></slot>
 					</text>
@@ -63,7 +71,9 @@
 
 			<view class="v-data">
 				<view class="v-num" style="background-color: #73C0DE;">
-					<text class="tv">图片:</text>
+					<text class="tv">
+						<slot name="tag5"></slot>
+					</text>
 					<text class="tv-num">
 						<slot name="num5"></slot>
 					</text>
@@ -76,11 +86,10 @@
 				</view>
 			</view>
 		</view>
-
 		<view class="v-line"></view>
 
 		<view class="v-table">
-			<ring-chart-item class="test1"></ring-chart-item>
+			<ring-chart-item class="r-chart"></ring-chart-item>
 
 			<uni-table class="u-table" border stripe emptyText="暂无更多数据">
 				<!-- 表头行 -->
@@ -91,7 +100,7 @@
 					<uni-th class="u-th-line" align="left">设置</uni-th>
 				</uni-tr>
 				<!-- 表格数据行 -->
-				<uni-tr v-for="item in tabList">
+				<uni-tr v-for="(item,index) in tabList" :key="index">
 					<uni-td>{{item.project}}</uni-td>
 					<uni-td>{{item.address}}</uni-td>
 					<uni-td>{{item.line}}</uni-td>
@@ -103,8 +112,15 @@
 				</uni-tr>
 			</uni-table>
 		</view>
-
 		<view class="v-line"></view>
+		
+		<view class = "v-card">
+			<card class="c-card" color1 = "#1890FF"></card>
+			<card class="c-card" color1 = "#91CB74"></card>
+			<card class="c-card" color1 = "#FAC858"></card>
+			<card class="c-card" color1 = "#EE6666"></card>
+			<card class="c-card" color1 = "#73C0DE"></card>
+		</view>
 
 	</view>
 	</view>
@@ -256,7 +272,7 @@
 		margin-left: 90px;
 	}
 
-	.test1 {
+	.r-chart {
 		display: flex;
 		flex-direction: row;
 		width: 40%;
@@ -287,4 +303,24 @@
 		display: flex;
 		flex-direction: row;
 	}
+
+	.v-card{
+		display: flex;
+		flex-direction: row;
+		background-color: #FFFFFF;
+		width: 98%;
+		height: 20%;
+		margin: 20px;
+	}
+	.c-card{
+		margin: auto 20px;
+		height: 100%;
+		width: 30%;
+		display: flex;
+		flex-direction: row;
+		background-color: #FFFFFF;
+		justify-content: center;
+		border-radius: 10px;
+	}
 </style>
+
