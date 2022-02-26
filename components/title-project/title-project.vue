@@ -1,5 +1,9 @@
 <template>
 	<view class="v-common">
+		<view class="v-more">
+			<text class="tv-more1"></text>
+			<text class="tv-more" type="primary" @click="moreData">更多</text>
+		</view>
 		<view class="v-content">
 			<view class="v-data">
 				<view class="v-num" style="background-color: #1890FF;">
@@ -187,11 +191,42 @@
 					line:"data/line/text/image1"
 				}]
 			};
+		},
+		methods:{
+			moreData(){
+				this.$emit('moreClick')
+			}
 		}
 	}
 </script>
 
 <style>
+	.v-more{
+		width: 100%;
+		height: 30px;
+		background-color: #f0f0f0;
+		display: flex;
+		flex-direction: row;
+	}
+	.tv-more1{
+		width: 150px;
+		height: 30px;
+		flex: 1;
+		line-height: 30px;
+		background-color: #f0f0f0;
+	}
+	.tv-more{
+		width: 60px;
+		height: 25px;
+		line-height: 25px;
+		text-align: center;
+		margin-top: 2px;
+		margin-right: 10px;
+		background-color: #1890FF;
+		color: white;
+		font-size: 13px;
+		border-radius: 5px;
+	}
 	.v-common {
 		height: 95vh;
 		display: flex;

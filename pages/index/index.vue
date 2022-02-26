@@ -26,7 +26,7 @@
 					<text>视频资源</text>
 				</view>
 
-				<view class="v-lift-item" v-if="explainTag" @click="explainSelect">
+			<!-- 	<view class="v-lift-item" v-if="explainTag" @click="explainSelect">
 					<image src="../../static/index/ic_select.png"></image>
 					<text>操作说明</text>
 				</view>
@@ -34,7 +34,7 @@
 					<image src="../../static/index/ic_select_n.png"></image>
 					<text>操作说明</text>
 				</view>
-
+ -->
 				<view class="v-lift-item" v-if="problemTag" @click="problemSelect">
 					<image src="../../static/index/ic_select.png"></image>
 					<text>问题反馈</text>
@@ -61,7 +61,7 @@
 			<view class="v-data">
 				<swiper  class="swiper"  :duration="0" :vertical="true" :disable-touch="true" :current="current">
 					<swiper-item class="swi-item">
-						<title-project >
+						<title-project @moreClick="moreClick">
 							<text slot="tag1">{{image}}</text>
 							<text slot="num1">{{num1}}</text>
 							<text slot="project1">{{project1}}</text>
@@ -109,15 +109,15 @@
 					</swiper-item>
 					
 					<swiper-item class="swi-item" >
-						<view>111111111</view>
-					</swiper-item>
-					
-					<swiper-item class="swi-item" >
 						<problem-send></problem-send>
 					</swiper-item>
 					
 					<swiper-item class="swi-item" >
 						<admin></admin>
+					</swiper-item>
+				
+					<swiper-item class="swi-item" >
+						<view>111111111</view>
 					</swiper-item>
 				</swiper>
 			</view>
@@ -172,21 +172,13 @@
 				this.adminTag = false;
 				this.current = 1;
 			},
-			explainSelect() {
-				this.imgTag = false;
-				this.videoTag = false;
-				this.explainTag = true;
-				this.problemTag = false;
-				this.adminTag = false;
-				this.current = 2;
-			},
 			problemSelect() {
 				this.imgTag = false;
 				this.videoTag = false;
 				this.explainTag = false;
 				this.problemTag = true;
 				this.adminTag = false;
-				this.current = 3;
+				this.current = 2;
 			},
 			adminSelect() {
 				this.imgTag = false;
@@ -194,8 +186,11 @@
 				this.explainTag = false;
 				this.problemTag = false;
 				this.adminTag = true;
-				this.current = 4;
+				this.current = 3;
 			},
+			moreClick(){
+				this.current = 4;
+			}
 		}
 	}
 </script>
@@ -203,6 +198,7 @@
 <style>
 	@import "../../static/index/index.css";
 	.swiper,.swi-item {
+		height: 100%;
 	  -webkit-transform: translate3d(0px, 0, 0);
 	  -moz-transform: translate3d(0px, 0, 0);
 	  -o-transform: translate(0px, 0px);

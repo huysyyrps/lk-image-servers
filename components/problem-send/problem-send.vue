@@ -114,16 +114,14 @@
 		margin: 0 5px;
 	}
 	text{
-		height: 45px;
+		height: 30px;
 		line-height: 45px;
-		justify-content: center;
-		align-items: center;
-		background-color: #F0F0F0;
+		width: 120px;
+		background-color: #aa55ff;
 		text-align: center;
 		color: white;
-		padding-left: 20px;
-		color: black;
-		font-size: 18px;
+		line-height: 30px;
+		margin-bottom: 10px;
 		border-radius: 10px;
 	}
 	textarea{
@@ -132,7 +130,6 @@
 		width: 100%;
 		height: 25%;
 		min-height: 200px;
-		margin-top: 10px;
 		padding-left: 10px;
 		border: #8F8F94 1px solid;
 		border-radius: 10px;
