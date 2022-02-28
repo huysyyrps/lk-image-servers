@@ -56,23 +56,26 @@
 					alert("请输入密码")
 					return
 				}
-				this.$post("mobile.do",this.logindata)
-				.then(resp=>{
-					console.log(resp);
-					if(resp.success){
-						uni.redirectTo({
-						    url: '../index/index'
-						});
-					}else{
-						uni.showToast({
-							icon:'error',
-							title:resp.msg
-						})
-						uni.redirectTo({
-						    url: '../index/index'
-						});
-					}
-				})
+				uni.redirectTo({
+				    url: '../index/index'
+				});
+				// this.$post("mobile.do",this.logindata)
+				// .then(resp=>{
+				// 	console.log(resp);
+				// 	if(resp.success){
+				// 		uni.redirectTo({
+				// 		    url: '../index/index'
+				// 		});
+				// 	}else{
+				// 		uni.showToast({
+				// 			icon:'error',
+				// 			title:resp.msg
+				// 		})
+				// 		uni.redirectTo({
+				// 		    url: '../index/index'
+				// 		});
+				// 	}
+				// })
 			}
 		}
 	}

@@ -117,7 +117,7 @@
 					</swiper-item>
 				
 					<swiper-item class="swi-item" >
-						<view>111111111</view>
+						<more></more>
 					</swiper-item>
 				</swiper>
 			</view>
