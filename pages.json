@@ -8,28 +8,14 @@
 					"titleNView": false
 				}
 			}
-		},
-		{
-			"path": "pages/index/index",
-			"style": {
-				"leftWindow":true,
-				"topWindow":true,
-				"app-plus": {
-					"titleNView": false
-				}
-			}
-		},
-		{
+		},{
 			"path": "pages/leftwindow/leftwindow",
 			"style": {
 				"navigationBarTitleText": "",
 				"enablePullDownRefresh": false
 			}
 		
-		}
-
-
-	    ,{
+		},{
             "path" : "pages/topwindow/topwindow",
             "style" :                                                                                    
             {
@@ -37,8 +23,7 @@
                 "enablePullDownRefresh": false
             }
             
-        }
-        ,{
+        },{
             "path" : "pages/image/image",
             "style" :                                                                                    {
                 "leftWindow":true,
@@ -48,8 +33,7 @@
                 }
             }
             
-        }
-        ,{
+        },{
             "path" : "pages/video/video",
             "style" :                                                                                    {
                 "leftWindow":true,
@@ -59,8 +43,7 @@
                 }
             }
             
-        }
-        ,{
+        },{
             "path" : "pages/admin/admin",
            "style" :                                                                                    {
                "leftWindow":true,
@@ -70,9 +53,18 @@
                }
            }
             
-        }
-        ,{
+        },{
             "path" : "pages/problem/problem",
+            "style": {
+            	"leftWindow":true,
+            	"topWindow":true,
+            	"app-plus": {
+            		"titleNView": false
+            	}
+            }
+            
+        },{
+            "path" : "pages/image/more_image",
             "style": {
             	"leftWindow":true,
             	"topWindow":true,

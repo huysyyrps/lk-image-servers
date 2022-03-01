@@ -43,7 +43,9 @@
 		},
 		methods: {
 			moreClick() {
-				this.current = 4;
+				uni.navigateTo({					
+					url: './more_image'
+				})
 			}
 		}
 	}

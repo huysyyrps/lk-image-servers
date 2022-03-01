@@ -160,10 +160,9 @@
 				console.log(item.title);
 				console.log(e);
 			}
-		}
+		},
 	}
 </script>
 
 <style>
-
 </style>
