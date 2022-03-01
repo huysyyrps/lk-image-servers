@@ -1,0 +1,54 @@
+.v-comment{
+		display: flex;
+		flex-direction: column;
+		height: 100%;
+	}
+	.v-retrieval{
+		height: 50px;
+		display: inline;
+		margin: 5px 20px 0 20px;
+		align-items: center;
+	}
+	
+	.in-retrieval{
+		margin: 10px auto;
+		height: 30px;
+		display: inline-block;
+		border: #bcbcbc 1px solid;
+		border-radius: 10px;
+		font-size: 14px;
+		padding-left: 10px;
+	}
+	button{
+		display: inline-block;
+		margin: 10px auto;
+		margin-left:30px;
+		height: 30px;
+		font-size: 14px;
+		text-align: center;
+		line-height: 30px;
+		justify-content: center;
+		align-items: center;
+	}
+	.btn-retrieval{
+		background-color: #007AFF;
+		color: white;
+	}
+	
+	.btn-add{
+		background-color: #91CB74;
+		color: white;
+	}
+	.btn-delect{
+		background-color: red;
+		color: white;
+	}
+
+	.v-table{
+		display: flex;
+		flex-direction: row;
+		height: 92%;
+	}
+	.uni-page{
+		height: 40px;
+	}

@@ -1,0 +1,74 @@
+#v-out {
+	background-size: 100% 100%;
+	height: 100vh;
+	width: auto;
+	display: flex;
+	background-image: url(../../static/login/tes1.jpg);
+}
+
+#v-test {
+	height: 180px;
+	width: 100%;
+	display: flex;
+	background-color: #293156;
+}
+
+#v-loginout {
+	height: 550px;
+	width: 480px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-top: 200px;
+	margin-left: -600px;
+	background-color: #323B6F;
+}
+
+#tv-login{
+	width: 500px;
+	font-size: 30px;
+	text-align: center;
+	margin: 40px;
+	color: #F0AD4E;
+}
+
+text{
+	height: auto;
+	width: 500px;
+	color: #FFFFFF;
+}
+
+.v-login{
+	height: 50px;
+	width: 500px;
+	background-color: #FFFFFF;
+	margin: 15px 20px 40px 20px;
+	border-radius: 15px;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
+image{
+	width: 25px;
+	height: 25px;
+	margin-left: 15px;
+}
+
+#img-ear{
+	margin-right: 20px;
+}
+
+input{
+	margin-left: 20px;
+	flex: 1;
+}
+
+button{
+	height: 50px;
+	width: 500px;
+	background-color: #007AFF;
+	margin: 15px 20px 40px 20px;
+	border-radius: 15px;
+	color: #FFFFFF;
+}
