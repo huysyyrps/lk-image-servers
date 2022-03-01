@@ -1,29 +1,84 @@
 {
 	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
 		{
-			"path": "pages/imagedata/imagedata",
-			"style" : {
-				"app-plus":{"titleNView":false}
-			}
-		},
-		{
 			"path": "pages/login/login",
-			"style" : {
-				"app-plus":{"titleNView":false}
+			"style": {
+				"leftWindow":false,
+				"app-plus": {
+					"titleNView": false
+				}
 			}
 		},
 		{
 			"path": "pages/index/index",
-			"style" : {
-				"app-plus":{"titleNView":false}
+			"style": {
+				"leftWindow":true,
+				"topWindow":true,
+				"app-plus": {
+					"titleNView": false
+				}
 			}
+		},
+		{
+			"path": "pages/leftwindow/leftwindow",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+		
 		}
+
+
 	    ,{
-            "path" : "pages/imagedata/imagedata",
+            "path" : "pages/topwindow/topwindow",
             "style" :                                                                                    
             {
                 "navigationBarTitleText": "",
                 "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/image/image",
+            "style" :                                                                                    {
+                "leftWindow":true,
+                "topWindow":true,
+                "app-plus": {
+                	"titleNView": false
+                }
+            }
+            
+        }
+        ,{
+            "path" : "pages/video/video",
+            "style" :                                                                                    {
+                "leftWindow":true,
+                "topWindow":true,
+                "app-plus": {
+                	"titleNView": false
+                }
+            }
+            
+        }
+        ,{
+            "path" : "pages/admin/admin",
+           "style" :                                                                                    {
+               "leftWindow":true,
+               "topWindow":true,
+               "app-plus": {
+               	"titleNView": false
+               }
+           }
+            
+        }
+        ,{
+            "path" : "pages/problem/problem",
+            "style": {
+            	"leftWindow":true,
+            	"topWindow":true,
+            	"app-plus": {
+            		"titleNView": false
+            	}
             }
             
         }
@@ -33,5 +88,26 @@
 		"navigationBarTitleText": "uni-app",
 		"navigationBarBackgroundColor": "#F8F8F8",
 		"backgroundColor": "#F8F8F8"
+	},
+	"leftWindow": {
+		"path": "pages/leftwindow/leftwindow",
+		"style": {
+			"width": "200px" ,// 页面宽度
+			"height":"95vh"
+		},
+		"matchMedia": {
+			"minWidth": 768 ,//生效条件，当窗口宽度大于768px时显示
+			"minHeight":2500
+		}
+	},
+	
+	"topWindow": {
+		"path": "pages/topwindow/topwindow",
+		"style": {
+			"width": "2000px" // 页面宽度
+		},
+		"matchMedia": {
+			"minWidth": 768 //生效条件，当窗口宽度大于768px时显示
+		}
 	}
 }

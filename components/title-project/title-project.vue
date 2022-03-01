@@ -108,7 +108,7 @@
 					<uni-td>{{item.project}}</uni-td>
 					<uni-td>{{item.address}}</uni-td>
 					<uni-td>{{item.line}}</uni-td>
-					<uni-td style="display: flex;flex-direction: row;" >
+					<uni-td style="display: flex;flex-direction: row;">
 						<uni-button size="mini" type="primary">修改</uni-button>
 						<uni-button size="mini" type="warn">删除</uni-button>
 					</uni-td>
@@ -117,13 +117,13 @@
 			</uni-table>
 		</view>
 		<view class="v-line"></view>
-		
-		<view class = "v-card">
-			<card class="c-card" color1 = "#1890FF"></card>
-			<card class="c-card" color1 = "#91CB74"></card>
-			<card class="c-card" color1 = "#FAC858"></card>
-			<card class="c-card" color1 = "#EE6666"></card>
-			<card class="c-card" color1 = "#73C0DE"></card>
+
+		<view class="v-card">
+			<card class="c-card" color1="#1890FF"></card>
+			<card class="c-card" color1="#91CB74"></card>
+			<card class="c-card" color1="#FAC858"></card>
+			<card class="c-card" color1="#EE6666"></card>
+			<card class="c-card" color1="#73C0DE"></card>
 		</view>
 
 	</view>
@@ -135,65 +135,66 @@
 		name: "title-project",
 		data() {
 			return {
-				tabList:[{
-					project:"测试地址1",
-					address:"测试项目地址",
-					line:"data/line/text/image1"
-				},
-				{
-					project:"测试地址1",
-					address:"测试项目地址",
-					line:"data/line/text/image1"
-				},
-				{
-					project:"测试地址1",
-					address:"测试项目地址",
-					line:"data/line/text/image1"
-				},
-				{
-					project:"测试地址1",
-					address:"测试项目地址",
-					line:"data/line/text/image1"
-				},
-				{
-					project:"测试地址1",
-					address:"测试项目地址",
-					line:"data/line/text/image1"
-				},
-				{
-					project:"测试地址1",
-					address:"测试项目地址",
-					line:"data/line/text/image1"
-				},
-				{
-					project:"测试地址1",
-					address:"测试项目地址",
-					line:"data/line/text/image1"
-				},
-				{
-					project:"测试地址1",
-					address:"测试项目地址",
-					line:"data/line/text/image1"
-				},
-				{
-					project:"测试地址1",
-					address:"测试项目地址",
-					line:"data/line/text/image1"
-				},
-				{
-					project:"测试地址1",
-					address:"测试项目地址",
-					line:"data/line/text/image1"
-				},
-				{
-					project:"测试地址1",
-					address:"测试项目地址",
-					line:"data/line/text/image1"
-				}]
+				tabList: [{
+						project: "测试地址1",
+						address: "测试项目地址",
+						line: "data/line/text/image1"
+					},
+					{
+						project: "测试地址1",
+						address: "测试项目地址",
+						line: "data/line/text/image1"
+					},
+					{
+						project: "测试地址1",
+						address: "测试项目地址",
+						line: "data/line/text/image1"
+					},
+					{
+						project: "测试地址1",
+						address: "测试项目地址",
+						line: "data/line/text/image1"
+					},
+					{
+						project: "测试地址1",
+						address: "测试项目地址",
+						line: "data/line/text/image1"
+					},
+					{
+						project: "测试地址1",
+						address: "测试项目地址",
+						line: "data/line/text/image1"
+					},
+					{
+						project: "测试地址1",
+						address: "测试项目地址",
+						line: "data/line/text/image1"
+					},
+					{
+						project: "测试地址1",
+						address: "测试项目地址",
+						line: "data/line/text/image1"
+					},
+					{
+						project: "测试地址1",
+						address: "测试项目地址",
+						line: "data/line/text/image1"
+					},
+					{
+						project: "测试地址1",
+						address: "测试项目地址",
+						line: "data/line/text/image1"
+					},
+					{
+						project: "测试地址1",
+						address: "测试项目地址",
+						line: "data/line/text/image1"
+					}
+				]
 			};
 		},
-		methods:{
-			moreData(){
+		methods: {
+			moreData() {
 				this.$emit('moreClick')
 			}
 		}
@@ -201,21 +202,23 @@
 </script>
 
 <style>
-	.v-more{
+	.v-more {
 		width: 100%;
 		height: 30px;
-		background-color: #f0f0f0;
+		background-color: #FFFFFF;
 		display: flex;
 		flex-direction: row;
 	}
-	.tv-more1{
+
+	.tv-more1 {
 		width: 150px;
 		height: 30px;
 		flex: 1;
 		line-height: 30px;
-		background-color: #f0f0f0;
+		background-color: #FFFFFF;
 	}
-	.tv-more{
+
+	.tv-more {
 		width: 60px;
 		height: 25px;
 		line-height: 25px;
@@ -227,16 +230,11 @@
 		font-size: 13px;
 		border-radius: 5px;
 	}
+
 	.v-common {
 		height: 95vh;
 		display: flex;
 		flex-direction: column;
-	}
-
-	.v-line {
-		background-color: #C8C7CC;
-		margin-top: 20px;
-		height: 2px;
 	}
 
 	.v-content {
@@ -244,12 +242,17 @@
 		flex-direction: row;
 		background-color: #FFFFFF;
 		width: 100%;
-		margin-top: 20px;
 		margin-left: 20px;
 	}
 
+	.v-line {
+		background-color: #C8C7CC;
+		margin-top: 20px;
+		height: 1px;
+	}
+
 	.v-data {
-		width: 25%;
+		width: 23%;
 		height: 100%;
 		display: flex;
 		flex-direction: row;
@@ -303,7 +306,7 @@
 	.v-table {
 		display: flex;
 		width: 100%;
-		height: 50%;
+		height: 55%;
 		margin-left: 90px;
 	}
 
@@ -319,6 +322,7 @@
 		width: 80%;
 		margin-left: 20px;
 		margin-right: 100px;
+		margin-top: 1px;
 	}
 
 	.u-th-project {
@@ -339,7 +343,7 @@
 		flex-direction: row;
 	}
 
-	.v-card{
+	.v-card {
 		display: flex;
 		flex-direction: row;
 		background-color: #FFFFFF;
@@ -347,7 +351,8 @@
 		height: 20%;
 		margin: 20px;
 	}
-	.c-card{
+
+	.c-card {
 		margin: auto 20px;
 		height: 100%;
 		width: 30%;
@@ -358,4 +363,3 @@
 		border-radius: 10px;
 	}
 </style>
-

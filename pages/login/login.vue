@@ -82,5 +82,5 @@
 </script>
 
 <style>
-	@import "../../static/login/login.css";
+	@import "./login.css";
 </style>
