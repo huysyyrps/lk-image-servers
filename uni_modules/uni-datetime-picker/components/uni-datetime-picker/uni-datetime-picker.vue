@@ -7,14 +7,14 @@
 					<view v-if="!isRange" class="uni-date-x uni-date-single">
 						<uni-icons type="calendar" color="#e1e1e1" size="22"></uni-icons>
 						<input class="uni-date__x-input" type="text" v-model="singleVal"
-							:placeholder="singlePlaceholderText" :disabled="true" />
+							:placeholder="singlePlaceholderText" :disabled="false" />
 					</view>
 					<view v-else class="uni-date-x uni-date-range">
 						<uni-icons type="calendar" color="#e1e1e1" size="22"></uni-icons>
 						<input class="uni-date__x-input t-c" type="text" v-model="range.startDate"
 							:placeholder="startPlaceholderText" :disabled="true" />
 						<slot>
-							<view class="">{{rangeSeparator}}</view>
+							<view class="" @click="show">{{rangeSeparator}}</view>
 						</slot>
 						<input class="uni-date__x-input t-c" type="text" v-model="range.endDate"
 							:placeholder="endPlaceholderText" :disabled="true" />
@@ -62,7 +62,7 @@
 								:disabled="!tempRange.startDate" />
 						</time-picker>
 					</view>
-					<uni-icons type="arrowthinright" color="#999" style="line-height: 40px;"></uni-icons>
+					<uni-icons type="arrowthinright" color="#999" style="line-height: 30px;"></uni-icons>
 					<view class="popup-x-header--datetime">
 						<input class="uni-date__input uni-date-range__input" type="text" v-model="tempRange.endDate"
 							:placeholder="endDateText" />
@@ -787,7 +787,7 @@
 
 	.uni-date-editor--x .uni-date__icon-clear {
 		position: absolute;
-		top: 0;
+		top: -3px;
 		right: 0;
 		display: inline-block;
 		box-sizing: border-box;
@@ -799,10 +799,11 @@
 
 	.uni-date__x-input {
 		padding: 0 8px;
-		height: 40px;
+		height: 30px;
 		width: 100%;
-		line-height: 40px;
+		line-height: 30px;
 		font-size: 14px;
+		border-radius: 15px;
 	}
 
 	.t-c {
@@ -810,10 +811,11 @@
 	}
 
 	.uni-date__input {
-		height: 40px;
+		height: 30px;
 		width: 100%;
-		line-height: 40px;
+		line-height: 30px;
 		font-size: 14px;
+		border-radius: 15px;
 	}
 
 	.uni-date-range__input {
@@ -904,7 +906,7 @@
 		border-top-style: solid;
 		border-top-width: 1px;
 		/* background-color: #fff; */
-		line-height: 40px;
+		line-height: 30px;
 		text-align: right;
 		color: #666;
 	}

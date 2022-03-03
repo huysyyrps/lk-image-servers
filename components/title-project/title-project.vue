@@ -1,9 +1,9 @@
 <template>
 	<view class="v-common">
-		<view class="v-more">
+		<!-- <view class="v-more">
 			<text class="tv-more1"></text>
 			<text class="tv-more" type="primary" @click="moreData">更多</text>
-		</view>
+		</view> -->
 		<view class="v-content">
 			<view class="v-data">
 				<view class="v-num" style="background-color: #1890FF;">
@@ -202,7 +202,7 @@
 </script>
 
 <style>
-	.v-more {
+	/* .v-more {
 		width: 100%;
 		height: 30px;
 		background-color: #FFFFFF;
@@ -229,10 +229,10 @@
 		color: white;
 		font-size: 13px;
 		border-radius: 5px;
-	}
+	} */
 
 	.v-common {
-		height: 95vh;
+		height: 96vh;
 		display: flex;
 		flex-direction: column;
 	}
@@ -243,6 +243,7 @@
 		background-color: #FFFFFF;
 		width: 100%;
 		margin-left: 20px;
+		margin-top: 20px;
 	}
 
 	.v-line {

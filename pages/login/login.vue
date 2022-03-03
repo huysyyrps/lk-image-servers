@@ -57,7 +57,7 @@
 					return
 				}
 				uni.redirectTo({
-				    url: '../index/index'
+				    url: '../image/image'
 				});
 				// this.$post("mobile.do",this.logindata)
 				// .then(resp=>{

@@ -1,10 +1,26 @@
 <template>
 	<view class="v-comment">
+		<title-bar leftData="人员管理" rightData="" @moreClick="moreClick"></title-bar>
 		<view class="v-retrieval">
-			<input class="in-retrieval" placeholder="关键字检索" />
-			<button class="btn-retrieval">检索</button>
-			<button class="btn-add">添加</button>
-			<button class="btn-delect">删除</button>
+			<view class="v-fond">
+				<view class="v-condition">
+					<text class="tv-con">用户名：</text>
+					<input class="in-retrieval" placeholder="用户名检索" />
+				</view>
+				<view class="v-condition">
+					<text class="tv-con">部门：</text>
+					<input class="in-retrieval" placeholder="部门检索" />
+				</view>
+				<view class="v-condition">
+					<text class="tv-con">手机号：</text>
+					<input class="in-retrieval" placeholder="手机号检索" />
+				</view>
+				<view class="v-button">
+					<button class="btn-retrieval">检索</button>
+					<button class="btn-selece" @click="allSelect">全选</button>
+					<button class="btn-delect">删除</button>
+				</view>
+			</view>
 		</view>
 		<view class="v-table">
 			<uni-table class="u-table" border stripe emptyText="暂无更多数据" type="selection" >

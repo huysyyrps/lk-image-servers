@@ -1,11 +1,10 @@
 .c-comment{
 		display: flex;
 		flex-direction: column;
-		margin: 0 5px;
+		margin: 0;
 	}
 	text{
 		height: 30px;
-		line-height: 45px;
 		width: 120px;
 		background-color: #aa55ff;
 		text-align: center;

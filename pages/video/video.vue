@@ -1,6 +1,7 @@
 <template>
 	<view>
-		<title-project @moreClick="moreClick">
+		<title-bar leftData="视频管理" rightData="更多" @moreClick="moreClick"></title-bar>
+		<title-project >
 			<text slot="tag1">{{video}}</text>
 			<text slot="num1">{{num1}}</text>
 			<text slot="project1">{{project1}}</text>
@@ -43,7 +44,9 @@
 		},
 		methods: {
 			moreClick() {
-				this.current = 4;
+				uni.navigateTo({
+					url: './more_video?tag=video'
+				})
 			}
 		}
 	}

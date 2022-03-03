@@ -1,18 +1,45 @@
+
 .uni-container {
-		height: 95vh;
-		width: 220px;
-		margin-bottom: 0px;
-		padding-bottom: 0px;
+		height: 100vh;
+		width: 200px;
 		background-color: #2B394D;
 		display: flex;
 		color: white;
-		padding-left: 40px;
 		flex-direction: column;
 	}
+	
+	.v-title {
+		height: 50px;
+		background-color: #000000;
+		padding-left: 20px;
+		display: flex;
+		flex-direction: row;
+	}
+	
+	.v-title text {
+		color: #F0AD4E;
+		font-size: 20px;
+		display: flex;
+		align-items: center;
+	}
+	
+	
+	.uni-panel-h{
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+	}
 	.uni-panel{
+		padding-left: 20px;
 		line-height: 50px;
 	}
 	
 	.uni-panel-c{
-		padding-left: 20px;
+		padding-left: 30px;
+	}
+	
+	image{
+		width: 17px;
+		height: 17px;
+		margin-right: 10px;
 	}

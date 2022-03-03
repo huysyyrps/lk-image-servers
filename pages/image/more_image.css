@@ -1,0 +1,73 @@
+.v-retrieval {
+	height: 30px;
+	margin: 10px 20px 20px 10px;
+}
+
+.v-fond{
+	margin-left: 0px;
+	display: flex;
+	flex-direction: row;
+}
+
+.v-condition{
+	height: 30px;
+	width: 300px;
+	display: flex;
+	flex-direction: row;
+}
+
+.tv-con{
+	height: 30px;
+	width: 85px;
+	line-height: 30px;
+}
+
+.in-retrieval {
+	height: 30px;
+	display: inline-block;
+	border: #bcbcbc 1px solid;
+	border-radius: 3px;
+	font-size: 14px;
+	padding-left: 10px;
+}
+.v-button{
+	width: 300px;
+	display: flex;
+	flex-direction: row;
+}
+
+button {
+	margin: 0 15px;
+	height: 30px;
+	font-size: 14px;
+	text-align: center;
+	line-height: 30px;
+	display: flex;
+	justify-content: flex-start;
+	align-items: flex-start;
+}
+
+.btn{
+	background-color: red;
+	width: 120px;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	color: white;
+	margin-left: 390px;
+}
+
+.btn-retrieval {
+	background-color: #007AFF;
+	color: white;
+}
+
+.btn-selece {
+	background-color: #91CB74;
+	color: white;
+}
+
+.btn-delect {
+	background-color: red;
+	color: white;
+}

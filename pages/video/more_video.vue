@@ -1,6 +1,6 @@
 <template>
 	<view>
-		<title-bar leftData="图片管理->图片列表" rightData="" @moreClick="moreClick"></title-bar>
+		<title-bar leftData="视频管理->视频列表" rightData="" @moreClick="moreClick"></title-bar>
 		<view class="v-retrieval">
 			<view class="v-fond">
 				<view class="v-condition">
@@ -24,16 +24,8 @@
 			</view>
 		</view>
 		<mk-goods-list :goods="goods" :show="show" :tag="tag" @clickItem="goodsItem"></mk-goods-list>
-		<uni-pagination class="uni-page" title="标题文字" show-icon="true" :total=imageNum current="0" pageSize=24></uni-pagination>
-		
-		<uni-popup ref="popup" >
-			<view style="display: flex;flex-direction: column;">
-				<image :src = imgSrc  style="width: 900px;height: 600px;"></image>
-				<view style="width: 900px;display: flex;">
-					<text class="btn" @click="delect">删除</text>
-				</view>
-			</view>
-		</uni-popup>
+		<uni-pagination class="uni-page" title="标题文字" show-icon="true" :total=imageNum current="0" pageSize=24>
+		</uni-pagination>
 	</view>
 </template>
 
@@ -41,175 +33,202 @@
 	export default {
 		data() {
 			return {
-				tag:"",
-				imgSrc : "",
+				single: "2021-04-3",
+				tag: "",
+				imgSrc: "",
 				goods: [{
 						title: "这个绝望的世界没有存在的价值，所剩的只有痛楚",
 						littleTitle: "思念、愿望",
 						img: "https://pic1.zhimg.com/4373a4f045e5e9ae16ebd6a624bf6228_b.png",
+						video: "http://stream.iqilu.com/vod_bag_2016//2020/02/16/903BE158056C44fcA9524B118A5BF230/903BE158056C44fcA9524B118A5BF230_H264_mp4_500K.mp4",
 						fixed: false
 					},
 					{
 						title: "这个绝望的世界没有存在的价值，所剩的只有痛楚",
 						littleTitle: "思念、愿望",
 						img: "https://pic1.zhimg.com/4373a4f045e5e9ae16ebd6a624bf6228_b.png",
+						video: "http://stream.iqilu.com/vod_bag_2016//2020/02/16/903BE158056C44fcA9524B118A5BF230/903BE158056C44fcA9524B118A5BF230_H264_mp4_500K.mp4",
 						fixed: false
 					},
 					{
 						title: "这个绝望的世界没有存在的价值，所剩的只有痛楚",
 						littleTitle: "思念、愿望",
 						img: "https://pic1.zhimg.com/4373a4f045e5e9ae16ebd6a624bf6228_b.png",
+						video: "http://stream.iqilu.com/vod_bag_2016//2020/02/16/903BE158056C44fcA9524B118A5BF230/903BE158056C44fcA9524B118A5BF230_H264_mp4_500K.mp4",
 						fixed: false
 					},
 					{
 						title: "这个绝望的世界没有存在的价值，所剩的只有痛楚",
 						littleTitle: "思念、愿望",
 						img: "https://pic1.zhimg.com/4373a4f045e5e9ae16ebd6a624bf6228_b.png",
+						video: "http://stream.iqilu.com/vod_bag_2016//2020/02/16/903BE158056C44fcA9524B118A5BF230/903BE158056C44fcA9524B118A5BF230_H264_mp4_500K.mp4",
 						fixed: false
 					},
 					{
 						title: "这个绝望的世界没有存在的价值，所剩的只有痛楚",
 						littleTitle: "思念、愿望",
 						img: "https://pic1.zhimg.com/4373a4f045e5e9ae16ebd6a624bf6228_b.png",
+						video: "http://stream.iqilu.com/vod_bag_2016//2020/02/16/903BE158056C44fcA9524B118A5BF230/903BE158056C44fcA9524B118A5BF230_H264_mp4_500K.mp4",
 						fixed: false
 					},
 					{
 						title: "这个绝望的世界没有存在的价值，所剩的只有痛楚",
 						littleTitle: "思念、愿望",
 						img: "https://pic1.zhimg.com/4373a4f045e5e9ae16ebd6a624bf6228_b.png",
+						video: "http://stream.iqilu.com/vod_bag_2016//2020/02/16/903BE158056C44fcA9524B118A5BF230/903BE158056C44fcA9524B118A5BF230_H264_mp4_500K.mp4",
 						fixed: false
 					},
 					{
 						title: "这个绝望的世界没有存在的价值，所剩的只有痛楚",
 						littleTitle: "思念、愿望",
 						img: "https://pic1.zhimg.com/4373a4f045e5e9ae16ebd6a624bf6228_b.png",
+						video: "http://stream.iqilu.com/vod_bag_2016//2020/02/16/903BE158056C44fcA9524B118A5BF230/903BE158056C44fcA9524B118A5BF230_H264_mp4_500K.mp4",
 						fixed: false
 					},
 					{
 						title: "这个绝望的世界没有存在的价值，所剩的只有痛楚",
 						littleTitle: "思念、愿望",
 						img: "https://pic1.zhimg.com/4373a4f045e5e9ae16ebd6a624bf6228_b.png",
+						video: "http://stream.iqilu.com/vod_bag_2016//2020/02/16/903BE158056C44fcA9524B118A5BF230/903BE158056C44fcA9524B118A5BF230_H264_mp4_500K.mp4",
 						fixed: false
 					},
 					{
 						title: "这个绝望的世界没有存在的价值，所剩的只有痛楚",
 						littleTitle: "思念、愿望",
 						img: "https://pic1.zhimg.com/4373a4f045e5e9ae16ebd6a624bf6228_b.png",
+						video: "http://stream.iqilu.com/vod_bag_2016//2020/02/16/903BE158056C44fcA9524B118A5BF230/903BE158056C44fcA9524B118A5BF230_H264_mp4_500K.mp4",
 						fixed: false
 					},
 					{
 						title: "这个绝望的世界没有存在的价值，所剩的只有痛楚",
 						littleTitle: "思念、愿望",
 						img: "https://pic1.zhimg.com/4373a4f045e5e9ae16ebd6a624bf6228_b.png",
+						video: "http://stream.iqilu.com/vod_bag_2016//2020/02/16/903BE158056C44fcA9524B118A5BF230/903BE158056C44fcA9524B118A5BF230_H264_mp4_500K.mp4",
 						fixed: false
 					},
 					{
 						title: "这个绝望的世界没有存在的价值，所剩的只有痛楚",
 						littleTitle: "思念、愿望",
 						img: "https://pic1.zhimg.com/4373a4f045e5e9ae16ebd6a624bf6228_b.png",
+						video: "http://stream.iqilu.com/vod_bag_2016//2020/02/16/903BE158056C44fcA9524B118A5BF230/903BE158056C44fcA9524B118A5BF230_H264_mp4_500K.mp4",
 						fixed: false
 					},
 					{
 						title: "这个绝望的世界没有存在的价值，所剩的只有痛楚",
 						littleTitle: "思念、愿望",
 						img: "https://pic1.zhimg.com/4373a4f045e5e9ae16ebd6a624bf6228_b.png",
+						video: "http://stream.iqilu.com/vod_bag_2016//2020/02/16/903BE158056C44fcA9524B118A5BF230/903BE158056C44fcA9524B118A5BF230_H264_mp4_500K.mp4",
 						fixed: false
 					},
 					{
 						title: "这个绝望的世界没有存在的价值，所剩的只有痛楚",
 						littleTitle: "思念、愿望",
 						img: "https://pic1.zhimg.com/4373a4f045e5e9ae16ebd6a624bf6228_b.png",
+						video: "http://stream.iqilu.com/vod_bag_2016//2020/02/16/903BE158056C44fcA9524B118A5BF230/903BE158056C44fcA9524B118A5BF230_H264_mp4_500K.mp4",
 						fixed: false
 					},
 					{
 						title: "这个绝望的世界没有存在的价值，所剩的只有痛楚",
 						littleTitle: "思念、愿望",
 						img: "https://pic1.zhimg.com/4373a4f045e5e9ae16ebd6a624bf6228_b.png",
+						video: "http://stream.iqilu.com/vod_bag_2016//2020/02/16/903BE158056C44fcA9524B118A5BF230/903BE158056C44fcA9524B118A5BF230_H264_mp4_500K.mp4",
 						fixed: false
 					},
 					{
 						title: "这个绝望的世界没有存在的价值，所剩的只有痛楚",
 						littleTitle: "思念、愿望",
 						img: "https://pic1.zhimg.com/4373a4f045e5e9ae16ebd6a624bf6228_b.png",
+						video: "http://stream.iqilu.com/vod_bag_2016//2020/02/16/903BE158056C44fcA9524B118A5BF230/903BE158056C44fcA9524B118A5BF230_H264_mp4_500K.mp4",
 						fixed: false
 					},
 					{
 						title: "这个绝望的世界没有存在的价值，所剩的只有痛楚",
 						littleTitle: "思念、愿望",
 						img: "https://pic1.zhimg.com/4373a4f045e5e9ae16ebd6a624bf6228_b.png",
+						video: "http://stream.iqilu.com/vod_bag_2016//2020/02/16/903BE158056C44fcA9524B118A5BF230/903BE158056C44fcA9524B118A5BF230_H264_mp4_500K.mp4",
 						fixed: false
 					},
 					{
 						title: "这个绝望的世界没有存在的价值，所剩的只有痛楚",
 						littleTitle: "思念、愿望",
 						img: "https://pic1.zhimg.com/4373a4f045e5e9ae16ebd6a624bf6228_b.png",
+						video: "http://stream.iqilu.com/vod_bag_2016//2020/02/16/903BE158056C44fcA9524B118A5BF230/903BE158056C44fcA9524B118A5BF230_H264_mp4_500K.mp4",
 						fixed: false
 					},
 					{
 						title: "这个绝望的世界没有存在的价值，所剩的只有痛楚",
 						littleTitle: "思念、愿望",
 						img: "https://pic1.zhimg.com/4373a4f045e5e9ae16ebd6a624bf6228_b.png",
+						video: "http://stream.iqilu.com/vod_bag_2016//2020/02/16/903BE158056C44fcA9524B118A5BF230/903BE158056C44fcA9524B118A5BF230_H264_mp4_500K.mp4",
 						fixed: false
 					},
 					{
 						title: "这个绝望的世界没有存在的价值，所剩的只有痛楚",
 						littleTitle: "思念、愿望",
 						img: "https://pic1.zhimg.com/4373a4f045e5e9ae16ebd6a624bf6228_b.png",
+						video: "http://stream.iqilu.com/vod_bag_2016//2020/02/16/903BE158056C44fcA9524B118A5BF230/903BE158056C44fcA9524B118A5BF230_H264_mp4_500K.mp4",
 						fixed: false
 					},
 					{
 						title: "这个绝望的世界没有存在的价值，所剩的只有痛楚",
 						littleTitle: "思念、愿望",
 						img: "https://pic1.zhimg.com/4373a4f045e5e9ae16ebd6a624bf6228_b.png",
+						video: "http://stream.iqilu.com/vod_bag_2016//2020/02/16/903BE158056C44fcA9524B118A5BF230/903BE158056C44fcA9524B118A5BF230_H264_mp4_500K.mp4",
 						fixed: false
 					},
 					{
 						title: "这个绝望的世界没有存在的价值，所剩的只有痛楚",
 						littleTitle: "思念、愿望",
 						img: "https://pic1.zhimg.com/4373a4f045e5e9ae16ebd6a624bf6228_b.png",
+						video: "http://stream.iqilu.com/vod_bag_2016//2020/02/16/903BE158056C44fcA9524B118A5BF230/903BE158056C44fcA9524B118A5BF230_H264_mp4_500K.mp4",
 						fixed: false
 					},
 					{
 						title: "这个绝望的世界没有存在的价值，所剩的只有痛楚",
 						littleTitle: "思念、愿望",
 						img: "https://pic1.zhimg.com/4373a4f045e5e9ae16ebd6a624bf6228_b.png",
+						video: "http://stream.iqilu.com/vod_bag_2016//2020/02/16/903BE158056C44fcA9524B118A5BF230/903BE158056C44fcA9524B118A5BF230_H264_mp4_500K.mp4",
 						fixed: false
 					}, {
 						title: "这个绝望的世界没有存在的价值，所剩的只有痛楚",
 						littleTitle: "思念、愿望",
 						img: "https://pic1.zhimg.com/4373a4f045e5e9ae16ebd6a624bf6228_b.png",
+						video: "http://stream.iqilu.com/vod_bag_2016//2020/02/16/903BE158056C44fcA9524B118A5BF230/903BE158056C44fcA9524B118A5BF230_H264_mp4_500K.mp4",
 						fixed: false
-					}, {
+					},
+					{
 						title: "这个绝望的世界没有存在的价值，所剩的只有痛楚",
 						littleTitle: "思念、愿望",
 						img: "https://pic1.zhimg.com/4373a4f045e5e9ae16ebd6a624bf6228_b.png",
+						video: "http://stream.iqilu.com/vod_bag_2016//2020/02/16/903BE158056C44fcA9524B118A5BF230/903BE158056C44fcA9524B118A5BF230_H264_mp4_500K.mp4",
 						fixed: false
-					}
+					},
 				],
-				imageNum : 24,
-				show:false
+				imageNum: 24,
+				show: false
 			}
 		},
-		onLoad: function (option) {
-		    const item = option.tag;
-			this.tag=item;
+		onLoad: function(option) {
+			const item = option.tag;
+			this.tag = item;
 			console.log(item)
+			this.single = Date.now();
 		},
 		methods: {
-			goodsItem(item, e) {
-				console.log(item.title);
-				console.log(e);
-				this.imgSrc = this.goods[e].img;
-				console.log(this.imgSrc);
-				this.$refs.popup.open('center')
-				
-			},
+			// goodsItem(item, e) {
+			// 	console.log(item.title);
+			// 	console.log(e);
+			// 	this.imgSrc = this.goods[e].img;
+			// 	console.log(this.imgSrc);
+			// 	this.$refs.popup.open('center')
+
+			// },
 			delect(item, e) {
 				console.log(item.title);
 				console.log(e);
 				this.$refs.popup.close()
 			},
-			allSelect(){
+			allSelect() {
 				this.show = !this.show
 			}
 		},
@@ -217,5 +236,5 @@
 </script>
 
 <style>
-	@import './more_image.css';
+	@import './more_video.css';
 </style>

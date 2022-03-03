@@ -1,6 +1,7 @@
 <template>
-	<view>
-		<title-project @moreClick="moreClick">
+	<view style="display: flex;flex-direction: column;">
+		<title-bar leftData="图片管理" rightData="更多" @moreClick="moreClick"></title-bar>
+		<title-project >
 			<text slot="tag1">{{image}}</text>
 			<text slot="num1">{{num1}}</text>
 			<text slot="project1">{{project1}}</text>
@@ -44,7 +45,7 @@
 		methods: {
 			moreClick() {
 				uni.navigateTo({					
-					url: './more_image'
+					url: './more_image?tag=image'
 				})
 			}
 		}

@@ -1,13 +1,14 @@
 <template>
 	<view class="c-comment">
-		<view style="display: flex;flex-direction: column;height: 50%;">
+		<title-bar leftData="问题反馈" rightData="" @moreClick="moreClick"></title-bar>
+		<view style="display: flex;flex-direction: column;height: 50%; margin-left: 5px;">
 			<text style="margin-top: 10px;">问题反馈</text>
 			<textarea placeholder="请输入反馈信息"></textarea>
 			<button>确认提交</button>
 			
 			<text style="margin-top: 30px;">反馈记录</text>
 		</view>
-		<view class="v-table" style="display: flex;flex-direction: row;height: 50%;">
+		<view class="v-table" style="display: flex;flex-direction: row;height: 50%; margin-left: 5px;">
 			<uni-table class="u-table" border stripe emptyText="暂无更多数据">
 				<!-- 表头行 -->
 				<uni-tr>

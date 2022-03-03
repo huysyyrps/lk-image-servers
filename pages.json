@@ -11,23 +11,14 @@
 		},{
 			"path": "pages/leftwindow/leftwindow",
 			"style": {
-				"navigationBarTitleText": "",
+				"navigationBarTitleText": "1111111111",
 				"enablePullDownRefresh": false
 			}
 		
 		},{
-            "path" : "pages/topwindow/topwindow",
-            "style" :                                                                                    
-            {
-                "navigationBarTitleText": "",
-                "enablePullDownRefresh": false
-            }
-            
-        },{
             "path" : "pages/image/image",
             "style" :                                                                                    {
                 "leftWindow":true,
-                "topWindow":true,
                 "app-plus": {
                 	"titleNView": false
                 }
@@ -37,7 +28,6 @@
             "path" : "pages/video/video",
             "style" :                                                                                    {
                 "leftWindow":true,
-                "topWindow":true,
                 "app-plus": {
                 	"titleNView": false
                 }
@@ -47,7 +37,6 @@
             "path" : "pages/admin/admin",
            "style" :                                                                                    {
                "leftWindow":true,
-               "topWindow":true,
                "app-plus": {
                	"titleNView": false
                }
@@ -57,7 +46,6 @@
             "path" : "pages/problem/problem",
             "style": {
             	"leftWindow":true,
-            	"topWindow":true,
             	"app-plus": {
             		"titleNView": false
             	}
@@ -67,7 +55,16 @@
             "path" : "pages/image/more_image",
             "style": {
             	"leftWindow":true,
-            	"topWindow":true,
+            	"app-plus": {
+            		"titleNView": false
+            	}
+            }
+            
+        }
+        ,{
+            "path" : "pages/video/more_video",
+            "style": {
+            	"leftWindow":true,
             	"app-plus": {
             		"titleNView": false
             	}
@@ -85,21 +82,11 @@
 		"path": "pages/leftwindow/leftwindow",
 		"style": {
 			"width": "200px" ,// 页面宽度
-			"height":"95vh"
+			"height":"100vh"
 		},
 		"matchMedia": {
 			"minWidth": 768 ,//生效条件，当窗口宽度大于768px时显示
 			"minHeight":2500
-		}
-	},
-	
-	"topWindow": {
-		"path": "pages/topwindow/topwindow",
-		"style": {
-			"width": "2000px" // 页面宽度
-		},
-		"matchMedia": {
-			"minWidth": 768 //生效条件，当窗口宽度大于768px时显示
 		}
 	}
 }
